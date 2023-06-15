@@ -14,6 +14,7 @@ public class AddressModel implements Serializable{
     private String mac;
     private String model;
     private String address;
+    private ClientModel client;
     private Integer client_id;
     
     public AddressModel(){}
@@ -65,7 +66,7 @@ public class AddressModel implements Serializable{
     public void setClient_id(Integer client_id) {
         this.client_id = client_id;
     }
-
+    
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -125,5 +126,13 @@ public class AddressModel implements Serializable{
     public String toString() {
         return "AddressModel [id=" + id + ", ip=" + ip + ", mac=" + mac + ", model=" + model + ", address=" + address
                 + ", client_id=" + client_id + "]";
+    }
+
+    public ClientModel getClient() {
+        return client;
+    }
+
+    public void setClient(ClientModel client) {
+        this.client = client;
     }
 }
